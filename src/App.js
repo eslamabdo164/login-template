@@ -3,13 +3,13 @@ import './App.css';
 
 class App extends Component {
   state = {
-    route : ''
+    route : 'signin'
   }
   render() {
     return (
       <div className="App">
         <p>Hello From inside the Website</p>
-        <a>Sign out</a>
+        <a class="f6 link dim ph3 pv2 mb2 dib white bg-black" href="#0"> Signout </a>
       </div>
     );
   }
