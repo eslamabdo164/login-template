@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import Homepage from './components/Homepage/home';
+import Signin from './components/sign/sign'
 class App extends Component {
-  state = {
+  state= {
     route : 'signin'
   }
   render() {
     return (
       <div className="App">
-        <p>Hello From inside the Website</p>
-        <a class="f6 link dim ph3 pv2 mb2 dib white bg-black" href="#0"> Signout </a>
+
+      {this.state.route === 'signin'? 
+        <Signin /> : 
+        <Homepage />  
+      }
       </div>
     );
   }
