@@ -6,13 +6,17 @@ class App extends Component {
   state= {
     route : 'signin'
   }
+
+  changeRoute = (route) =>{
+    this.setState({route})
+  }
   render() {
     return (
       <div className="App">
 
       {this.state.route === 'signin'? 
-        <Signin /> : 
-        <Homepage />  
+        <Signin changeRoute ={this.changeRoute} /> : 
+        <Homepage changeRoute ={this.changeRoute} />  
       }
       </div>
     );
